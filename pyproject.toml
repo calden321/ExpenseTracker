@@ -2,13 +2,15 @@
 name = "expense-tracker"
 version = "0.1.0"
 description = "Django Expense Tracker"
-authors = ["Your Name <you@example.com>"]
+authors = ["Your Name <caldenrad0208@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"       # Python 3.10 or higher (3.13 may cause issues)
-django = "^4.2"        # Or your Django version
-gunicorn = "^20.1.0"   # Required for Render.com
-psycopg2-binary = "^2.9"  # For PostgreSQL (Render uses this)
+python = "^3.10"  # Python 3.10 recommended for Django compatibility
+django = "^4.2"  # Django LTS version
+gunicorn = "^20.1.0"  # Required for production server
+psycopg2-binary = "^2.9.9"  # PostgreSQL adapter (exact version)
+python-dateutil = "^2.8.2"  # For relativedelta in your models
+whitenoise = "^6.6.0"  # For static files in production
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
